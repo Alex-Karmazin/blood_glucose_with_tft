@@ -1,0 +1,199 @@
+{
+  "timestamp": "2025-09-08T21:02:33.600457",
+  "models": {
+    "tft": {
+      "quantiles": {
+        "Q01": {
+          "RMSE": 118.21039502620258,
+          "MAE": 101.40446210919725,
+          "MAPE": 63.597871405999705,
+          "SMAPE": 97.32297778365832
+        },
+        "Q10": {
+          "RMSE": 103.83156552547216,
+          "MAE": 84.95051536887945,
+          "MAPE": 50.87791811128138,
+          "SMAPE": 72.61361080957427
+        },
+        "Q20": {
+          "RMSE": 93.70226937490656,
+          "MAE": 74.42690146588944,
+          "MAPE": 44.072267851543664,
+          "SMAPE": 59.3613846759266
+        },
+        "Q50": {
+          "RMSE": 64.0805518532699,
+          "MAE": 50.510611091844936,
+          "MAPE": 40.24950921058141,
+          "SMAPE": 35.67127542032835
+        },
+        "Q80": {
+          "RMSE": 65.27362864099503,
+          "MAE": 57.26887578196465,
+          "MAPE": 54.67892643163961,
+          "SMAPE": 39.34070861437333
+        },
+        "Q90": {
+          "RMSE": 73.5477003423848,
+          "MAE": 65.55319428269648,
+          "MAPE": 65.1445547242697,
+          "SMAPE": 43.48823730799984
+        },
+        "Q99": {
+          "RMSE": 88.45540974100989,
+          "MAE": 78.18000273179271,
+          "MAPE": 79.89571371564911,
+          "SMAPE": 49.02038879092266
+        }
+      },
+      "summary": {
+        "best_rmse": {
+          "quantile": "Q50",
+          "value": 64.0805518532699
+        },
+        "best_mae": {
+          "quantile": "Q50",
+          "value": 50.510611091844936
+        },
+        "best_mape": {
+          "quantile": "Q50",
+          "value": 40.24950921058141
+        },
+        "best_smape": {
+          "quantile": "Q50",
+          "value": 35.67127542032835
+        }
+      },
+      "dataset": "Test",
+      "model_name": "tft",
+      "model_type": "TFTGlucoseEvaluator",
+      "timestamp": "2025-09-08T21:03:30.155162",
+      "model_info": {
+        "model_type": "TFT (Temporal Fusion Transformer)",
+        "input_chunk_length": 35,
+        "output_chunk_length": 1,
+        "hidden_size": 6,
+        "lstm_layers": 3,
+        "attention_heads": 2,
+        "dropout": 0.1,
+        "batch_size": 48,
+        "learning_rate": 0.0010223,
+        "quantiles": [
+          0.01,
+          0.1,
+          0.2,
+          0.5,
+          0.8,
+          0.9,
+          0.99
+        ],
+        "status": "Model loaded"
+      }
+    },
+    "chronos": {
+      "dataset": "Test",
+      "quantiles": {
+        "Q01": {
+          "RMSE": 157.3094024658203,
+          "MAE": 145.07205200195312,
+          "MAPE": 99.87759399414062,
+          "SMAPE": 199.51129150390625
+        },
+        "Q10": {
+          "RMSE": 157.3094024658203,
+          "MAE": 145.07205200195312,
+          "MAPE": 99.87759399414062,
+          "SMAPE": 199.51129150390625
+        },
+        "Q20": {
+          "RMSE": 157.2871856689453,
+          "MAE": 145.04745483398438,
+          "MAPE": 99.85678100585938,
+          "SMAPE": 199.42820739746094
+        },
+        "Q50": {
+          "RMSE": 157.23936462402344,
+          "MAE": 144.99246215820312,
+          "MAPE": 99.80917358398438,
+          "SMAPE": 199.23855590820312
+        },
+        "Q80": {
+          "RMSE": 157.13479614257812,
+          "MAE": 144.8732147216797,
+          "MAPE": 99.70851135253906,
+          "SMAPE": 198.83824157714844
+        },
+        "Q90": {
+          "RMSE": 157.04994201660156,
+          "MAE": 144.79244995117188,
+          "MAPE": 99.65023040771484,
+          "SMAPE": 198.6067657470703
+        },
+        "Q99": {
+          "RMSE": 157.04994201660156,
+          "MAE": 144.79244995117188,
+          "MAPE": 99.65023040771484,
+          "SMAPE": 198.6067657470703
+        }
+      },
+      "summary": {
+        "best_rmse": {
+          "quantile": "Q90",
+          "value": 157.04994201660156
+        },
+        "best_mae": {
+          "quantile": "Q90",
+          "value": 144.79244995117188
+        },
+        "best_mape": {
+          "quantile": "Q90",
+          "value": 99.65023040771484
+        },
+        "best_smape": {
+          "quantile": "Q90",
+          "value": 198.6067657470703
+        }
+      },
+      "model_name": "chronos",
+      "model_type": "ChronosGlucoseEvaluator",
+      "timestamp": "2025-09-08T21:04:04.923049",
+      "model_info": {
+        "model_type": "Chronos (Pretrained Foundation Model)",
+        "model_name": "amazon/chronos-t5-small",
+        "device": "cpu",
+        "torch_dtype": "torch.float32",
+        "n_samples": 100,
+        "quantiles": [
+          0.01,
+          0.1,
+          0.2,
+          0.5,
+          0.8,
+          0.9,
+          0.99
+        ],
+        "status": "Model loaded"
+      }
+    }
+  },
+  "summary": {
+    "best_models": {
+      "RMSE": {
+        "model": "tft",
+        "value": 64.0805518532699
+      },
+      "MAE": {
+        "model": "tft",
+        "value": 50.510611091844936
+      },
+      "MAPE": {
+        "model": "tft",
+        "value": 40.24950921058141
+      },
+      "SMAPE": {
+        "model": "tft",
+        "value": 35.67127542032835
+      }
+    }
+  }
+}
